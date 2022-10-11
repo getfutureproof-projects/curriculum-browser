@@ -16,6 +16,10 @@ function App() {
       <header className="bg-white">
         <Nav sections={courseSections}/>
       </header>
+
+      <section className='ltr'>
+        A 2.5-year programme combining intensive training & immersive placement experiences, taking the tech-curious to tech-professional. 
+      </section>
       {renderCourseSections()}
       <section className='footer' />
     </div>

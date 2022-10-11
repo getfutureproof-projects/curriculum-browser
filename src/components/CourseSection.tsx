@@ -1,5 +1,5 @@
 import { HTMLAttributes } from 'react';
-import { Airtable } from '../Airtable'
+import { Airtable } from './Airtable'
 
 interface CourseSectionProps extends HTMLAttributes<HTMLDivElement> {
     /** required */
