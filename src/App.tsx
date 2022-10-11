@@ -12,7 +12,9 @@ function App() {
 
   return (
     <div>
+      <header className="bg-white"/>
       {renderCourseSections()}
+      <section className='footer' />
     </div>
   )
 }
