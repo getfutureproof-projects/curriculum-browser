@@ -17,7 +17,7 @@ export function CourseSection({ sectionName, description, atId="" }: CourseSecti
         { name: "Software Engineering & Design", atId: "shrOTiklnj1suw6uq" },
         { name: "Data & DevOps", atId: "shrJznamiQCd5vqO6" }
       ]
-      const renderDisciplines = () => disciplines.map((d, i) => <Table title={d.name} atId={d.atId} tWidth={"35vw"} />)
+      const renderDisciplines = () => disciplines.map((d, i) => <Table key={i} title={d.name} atId={d.atId} tWidth={"35vw"} />)
     
   return (
     <section className="course-section" style={{width: "80vw", height: 'min-content', minHeight: '500px'}}>
