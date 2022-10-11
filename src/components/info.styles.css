@@ -1,0 +1,33 @@
+.info {
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    grid-template-rows: auto 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+
+.info div, .tip {
+    padding: 30px;
+    font-size: smaller;
+    text-align: left;
+}
+
+span.tip {
+    margin-right: auto;
+    margin-bottom: 10px;
+    padding: 0;
+    /* border: 2px solid red; */
+    text-align: left;
+}
+
+.info #left {
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+.info .tr {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.info .br {
+    grid-area: 2 / 2 / 3 / 3;
+}

@@ -6,12 +6,14 @@ interface CourseSectionProps extends HTMLAttributes<HTMLDivElement> {
     sectionName: string;
     /** section description */
     description: string;
+    /** section description */
+    further?: string;
     /** pass Airtable ID */
     atId?: string;
 }
 
 
-export function CourseSection({ sectionName, description, atId="" }: CourseSectionProps): JSX.Element {
+export function CourseSection({ sectionName, description, further="", atId="" }: CourseSectionProps): JSX.Element {
     
     const disciplines = [
         { name: "Software Engineering & Design", atId: "shrOTiklnj1suw6uq" },
@@ -22,7 +24,9 @@ export function CourseSection({ sectionName, description, atId="" }: CourseSecti
   return (
     <section id={sectionName.toLowerCase()} className="course-section border" style={{width: "80vw", paddingBottom: '100px', height: 'min-content' }}>
         <h3 style={{marginRight: 'auto', marginBottom: '10px'}}>{sectionName}</h3>
-        <span style={{marginRight: 'auto', marginTop: '5px', marginBottom: '10px', textAlign: 'left', width: '45vw', minWidth: '400px'}}>{description}</span>
+        {/* <span style={{marginRight: 'auto', marginTop: '5px', marginBottom: '10px', textAlign: 'left', width: '45vw', minWidth: '400px'}}>{description}</span> */}
+        <span className="tip">{description}</span>
+        <span className="tip">{further}</span>
         <div style={{display: "flex", justifyContent: "space-between", width: "100%", height: "300px", overflow: "clip"}}>
         {
             sectionName === "Disciplines" ? renderDisciplines() : <Table atId={atId} tWidth={"80vw"} />
