@@ -4,12 +4,14 @@ import { Airtable } from '../Airtable'
 interface CourseSectionProps extends HTMLAttributes<HTMLDivElement> {
     /** required */
     sectionName: string;
+    /** section description */
+    description: string;
     /** pass Airtable ID */
     atId?: string;
 }
 
 
-export function CourseSection({ sectionName, atId="" }: CourseSectionProps): JSX.Element {
+export function CourseSection({ sectionName, description, atId="" }: CourseSectionProps): JSX.Element {
     
     const disciplines = [
         { name: "Software Engineering & Design", atId: "shrOTiklnj1suw6uq" },
@@ -20,6 +22,7 @@ export function CourseSection({ sectionName, atId="" }: CourseSectionProps): JSX
   return (
     <section className="course-section" style={{width: "80vw", height: 'min-content', minHeight: '500px'}}>
         <h3>{sectionName}</h3>
+        <span>{description}</span>
         <div style={{display: "flex", justifyContent: "space-between", width: "100%"}}>
         {
             sectionName === "Disciplines" ?
