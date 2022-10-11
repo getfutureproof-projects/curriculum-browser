@@ -20,7 +20,7 @@ export function CourseSection({ sectionName, atId="" }: CourseSectionProps): JSX
   return (
     <section className="course-section" style={{width: "80vw", height: 'min-content', minHeight: '500px'}}>
         <h3>{sectionName}</h3>
-        <div style={{display: "flex", justifyContent: "space-between"}}>
+        <div style={{display: "flex", justifyContent: "space-between", width: "100%"}}>
         {
             sectionName === "Disciplines" ?
                 renderDisciplines() : <Table atId={atId} tWidth={"80vw"} />
