@@ -11,7 +11,9 @@
   "dependencies": {
     "airtable": "^0.11.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-loading-iframe": "^1.1.0",
+    "react-spinners": "^0.13.6"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",
