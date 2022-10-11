@@ -45,7 +45,7 @@ const Table = ({title, atId, tWidth}: TableProps): JSX.Element => (
     <div className="table" style={{width: tWidth}}>
         {title && <h4 style={{marginRight: "auto"}}>{title}</h4> }
         <div style={{width: tWidth, height: '300px' }}>
-        <Airtable atId={atId} />
+        {/* <Airtable atId={atId} /> */}
         </div>
     </div>
 )

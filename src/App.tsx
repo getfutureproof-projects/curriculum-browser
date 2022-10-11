@@ -1,6 +1,7 @@
 import './App.css'
 import { CourseSection } from './components/CourseSection'
 import { Nav } from './components/Nav'
+import { Sidebar } from './components/Sidebar'
 
 function App() {
   const courseSections = [
@@ -15,6 +16,8 @@ function App() {
     <div>
       <header className="bg-white">
         <Nav sections={courseSections}/>
+      <Sidebar />
+      
       </header>
 
       <section className='ltr'>

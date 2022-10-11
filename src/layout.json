@@ -1,0 +1,43 @@
+{
+    "periods": [
+        {
+            "tag": "assess",
+            "name": "pre-academy",
+            "color": "lemon",
+            "time": "3 months",
+            "sections": [
+                { 
+                    "name": "Apply",
+                    "description": "Apply & pass competency & technical interviews"
+                }
+                { 
+                    "name": "Prepare",
+                    "description": "Complete prep work"
+                }
+            ]
+        },
+        {
+            "tag": "amplify",
+            "name": "intensive training",
+            "color": "lime",
+            "time": "12 weeks",
+            "sections": [
+                { "name": "Foundations", "description": "Kickstart learning with fundamental tech skills" },
+                { "name": "Discovery", "description": "Explore skills across different tech roles" },
+                { "name": "Disciplines", "description": "Develop deeper expertise in specific areas" },
+                { "name": "Launch", "description": "Showcase new skills & projects" }
+            ]
+        },
+        {
+            "tag": "accelerate",
+            "name": "immersive placement",
+            "color": "coral",
+            "time": "2 years",
+            "sections": [
+                { "name": "Transition", "description": "Prepare for placement" },
+                { "name": "Specialisation Y1", "description": "Build expertise in different disciplines" },
+                { "name": "Specialisation Y2", "description": "Expand expertise with additional disciplines" }
+            ]
+        }
+    ]
+}
