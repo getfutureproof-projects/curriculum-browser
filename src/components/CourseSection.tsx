@@ -20,7 +20,7 @@ export function CourseSection({ sectionName, description, atId="" }: CourseSecti
       const renderDisciplines = () => disciplines.map((d, i) => <Table key={i} title={d.name} atId={d.atId} tWidth={"35vw"} />)
     
   return (
-    <section className="course-section border" style={{width: "80vw", paddingBottom: '100px', height: 'min-content' }}>
+    <section id={sectionName} className="course-section border" style={{width: "80vw", paddingBottom: '100px', height: 'min-content' }}>
         <h3 style={{marginRight: 'auto', marginBottom: '10px'}}>{sectionName}</h3>
         <span style={{marginRight: 'auto', marginTop: '5px', marginBottom: '10px', textAlign: 'left', width: '50vw', minWidth: '400px'}}>{description}</span>
         <div style={{display: "flex", justifyContent: "space-between", width: "100%", height: "300px", overflow: "clip"}}>

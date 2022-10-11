@@ -1,5 +1,6 @@
 import './App.css'
 import { CourseSection } from './components/CourseSection'
+import { Nav } from './components/Nav'
 
 function App() {
   const courseSections = [
@@ -12,7 +13,9 @@ function App() {
 
   return (
     <div>
-      <header className="bg-white"/>
+      <header className="bg-white">
+        <Nav sections={courseSections}/>
+      </header>
       {renderCourseSections()}
       <section className='footer' />
     </div>
