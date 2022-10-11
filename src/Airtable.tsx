@@ -1,4 +1,6 @@
 import { HTMLAttributes } from 'react';
+import LoadingIframe from 'react-loading-iframe';
+import SquareLoader from "react-spinners/SquareLoader";
 
 interface AirtableProps extends HTMLAttributes<HTMLIFrameElement> {
     /** required */
@@ -7,8 +9,9 @@ interface AirtableProps extends HTMLAttributes<HTMLIFrameElement> {
 
 export function Airtable({ atId }: AirtableProps) {
     return (
-            <iframe
-                className="airtable-embed" frameBorder="0" 
+            <LoadingIframe
+                skeleton={<Skeleton />}
+                className="airtable-embed" frameBorder={0} 
                 src={`https://airtable.com/embed/${atId}` }
                 style={{
                     background: "transparent", 
@@ -16,6 +19,23 @@ export function Airtable({ atId }: AirtableProps) {
                     width: "100%",
                     height: "100%"
                 }}>
-            </iframe>
+            </LoadingIframe>
     )
 }
+
+
+
+const Skeleton = () => {
+      return (
+        <section className="ttb" style={{paddingTop: '100px'}}>
+
+        <SquareLoader
+            color={'#3c2157'}
+            loading
+            aria-label="Loading Spinner"
+            data-testid="loader"
+            />
+            <p className='display-font'>Loading...</p>
+        </section>
+      )
+      }
