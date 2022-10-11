@@ -1,5 +1,11 @@
-export function Airtable({ atId }) {
+import { HTMLAttributes } from 'react';
 
+interface AirtableProps extends HTMLAttributes<HTMLIFrameElement> {
+    /** required */
+    atId: string;
+}
+
+export function Airtable({ atId }: AirtableProps) {
     return (
             <iframe
                 className="airtable-embed" frameBorder="0" 
