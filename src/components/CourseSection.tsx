@@ -12,8 +12,8 @@ interface CourseSectionProps extends HTMLAttributes<HTMLDivElement> {
 export function CourseSection({ sectionName, atId="" }: CourseSectionProps): JSX.Element {
     
     const disciplines = [
-        { name: "Software Engineering & Design", atId: "shrdM3hKaMLUnLRGm" },
-        { name: "Data & DevOps", atId: "shrUolFJ0sCdpGEEA" }
+        { name: "Software Engineering & Design", atId: "shrOTiklnj1suw6uq" },
+        { name: "Data & DevOps", atId: "shrJznamiQCd5vqO6" }
       ]
       const renderDisciplines = () => disciplines.map((d, i) => <Table title={d.name} atId={d.atId} tWidth={"35vw"} />)
     
