@@ -20,9 +20,9 @@ export function CourseSection({ sectionName, description, atId="" }: CourseSecti
       const renderDisciplines = () => disciplines.map((d, i) => <Table key={i} title={d.name} atId={d.atId} tWidth={"35vw"} />)
     
   return (
-    <section className="course-section" style={{width: "80vw", height: 'min-content', minHeight: '500px'}}>
-        <h3>{sectionName}</h3>
-        <span>{description}</span>
+    <section className="course-section" style={{width: "80vw", height: 'min-content', minHeight: '500px', margin: "100px 0"}}>
+        <h3 style={{marginRight: 'auto', marginBottom: '10px'}}>{sectionName}</h3>
+        <span style={{marginRight: 'auto', marginTop: '5px', marginBottom: '10px', textAlign: 'left', width: '50vw', minWidth: '400px'}}>{description}</span>
         <div style={{display: "flex", justifyContent: "space-between", width: "100%"}}>
         {
             sectionName === "Disciplines" ?
@@ -44,7 +44,7 @@ interface TableProps extends HTMLAttributes<HTMLDivElement> {
 
 const Table = ({title, atId, tWidth}: TableProps): JSX.Element => (
     <div className="table" style={{width: tWidth, height: "300px" }}>
-        {title && <h4>{title}</h4> }
+        {title && <h4 style={{marginRight: "auto"}}>{title}</h4> }
         <Airtable atId={atId} />
     </div>
 )
