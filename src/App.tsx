@@ -51,7 +51,7 @@ function App() {
         {/* <Nav sections={courseSections} /> */}
         {renderCourseSections()}
       </main>
-        <section className='footer' style={{width: '100vw', position: 'fixed', bottom: 0, left: 0}}/>
+        <section className='footer' style={{width: '65vw', position: 'fixed', bottom: 0, right: 0}}/>
         <Riser visible={!atTop}/>
     </>
   )
@@ -62,7 +62,7 @@ export default App
 
 function Riser({visible}: {visible: boolean}){
   return (
-    <div style={{
+    <div id="riser" style={{
       position: 'fixed',
       bottom: 0, left: 0,
       height: '13vh',

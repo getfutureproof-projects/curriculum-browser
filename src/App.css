@@ -90,6 +90,24 @@ main {
     --purple: #ffffff;
     --white: #3c2157;
   }
+  
+  section, .course-section, main, aside, #top-bar, #sidebar, .bg-white, html, .left {
+    background: #3c2157 !important;
+  }
+  
+  #sidebar .right .back,  {
+    color: #ffffff !important;
+  }
+  
+  #sidebar .mid, #sidebar .right, #riser span {
+    color: #3c2157 !important;
+  }
+  
+  svg.icon {
+    fill: #3c2157 !important;
+  }
+  
+  .footer { display: none; }
 }
 
 @keyframes logo-spin {
@@ -114,3 +132,5 @@ main {
 .read-the-docs {
   color: #888;
 }
+
+
