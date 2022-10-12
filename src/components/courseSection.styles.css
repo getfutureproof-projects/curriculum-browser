@@ -5,12 +5,21 @@
 }
 
 span.tip {
-    /* padding: 0 100px 0 0; */
+    padding: 0 100px 0 0;
     /* margin-left: 100px; */
-    align-self: start;
-    max-width: 70%;
+    /* align-self: start; */
+    max-width: 50%;
     margin-top: 10px;
     /* padding: 0; */
     /* border: 2px solid red; */
     text-align: left;
+}
+
+.course-section h2 {
+    position: absolute;
+    right: 50px;
+  }
+
+.course-section .description {
+    max-width: 50% !important;
 }

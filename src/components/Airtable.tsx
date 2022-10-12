@@ -1,6 +1,7 @@
 import { HTMLAttributes } from 'react';
 import LoadingIframe from 'react-loading-iframe';
 import SquareLoader from "react-spinners/SquareLoader";
+import RingLoader from "react-spinners/RingLoader";
 
 interface AirtableProps extends HTMLAttributes<HTMLIFrameElement> {
     /** required */
@@ -30,7 +31,8 @@ const Skeleton = () => {
       return (
         <section className="ttb" style={{paddingTop: '100px', width: '100%'}}>
 
-        <SquareLoader
+        {/* <SquareLoader */}
+        <RingLoader
             color="#b6a2ff"
             loading
             aria-label="Loading Spinner"
