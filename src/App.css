@@ -54,7 +54,7 @@ main {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-@media only screen and ((max-width: 880px) or (max-height: 500px) or (orientation: portrait)){
+@media screen and (max-width: 880px),  screen and (max-height: 500px), screen and (orientation: portrait){
   body::before {
     content: "Please visit us on a screen";
     background-color: var(--violet);
@@ -85,6 +85,31 @@ main {
   }
 }
 
+@media (prefers-color-scheme: dark) {
+	:root {
+    --purple: #ffffff;
+    --white: #3c2157;
+  }
+  
+  section, .course-section, main, aside, #top-bar, #sidebar, .bg-white, html, .left {
+    background: #3c2157 !important;
+  }
+  
+  #sidebar .right .back,  {
+    color: #ffffff !important;
+  }
+  
+  #sidebar .mid, #sidebar .right, #riser span {
+    color: #3c2157 !important;
+  }
+  
+  svg.icon {
+    fill: #3c2157 !important;
+  }
+  
+  .footer { display: none; }
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -107,3 +132,5 @@ main {
 .read-the-docs {
   color: #888;
 }
+
+

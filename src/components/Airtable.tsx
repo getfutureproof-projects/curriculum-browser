@@ -31,12 +31,12 @@ const Skeleton = () => {
         <section className="ttb" style={{paddingTop: '100px', width: '100%'}}>
 
         <SquareLoader
-            color={'#3c2157'}
+            color="#b6a2ff"
             loading
             aria-label="Loading Spinner"
             data-testid="loader"
             />
-            <p className='display-font'>Loading...</p>
+            <p className='display-font text-violet'>Loading...</p>
         </section>
       )
       }
