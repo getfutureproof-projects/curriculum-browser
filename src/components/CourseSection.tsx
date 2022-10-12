@@ -39,13 +39,13 @@ export function CourseSection({ sectionName, description, atId="", updateSideBar
                 <div 
                     ref={sectionRef} id={sectionName.toLowerCase()}  className="tip" 
                     style={{
-                        display: 'flex', flexDirection: 'row-reverse', 
+                        display: 'flex', 
                         marginTop: '10vh', padding: '0 30px 0 0',
                         marginBottom: '8vh'
                         }} >
-                    <h2 style={{margin: 0, padding: '20px 30px', verticalAlign: 'end', display: 'inline-block'}}>{sectionName}</h2>
+                    <h2 style={{margin: 0, padding: '20px 30px', verticalAlign: 'end', display: 'inline-block', position: 'absolute', right: '50px'}}>{sectionName}</h2>
                     {/* <span style={{marginRight: 'auto', marginTop: '5px', marginBottom: '10px', textAlign: 'left', width: '45vw', minWidth: '400px'}}>{description}</span> */}
-                    <span style={{margin: 0, padding: '0 80px 0 30px'}}>{description}</span>
+                    <span className="description">{description}</span>
                 </div>
                 {/* <span className="tip">{further}</span> */}
                 <div style={{display: "flex", justifyContent: "space-between", width: "inherit", minHeight: "300px" }}>

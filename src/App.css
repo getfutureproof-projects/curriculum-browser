@@ -54,6 +54,22 @@ main {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+@media screen and (min-width: 1480px) {
+  .tip, .course-section .tip, .tip span {
+    width: 100% !important;
+    max-width: 1000px !important;
+  }
+
+  /* .course-section .tip {
+    background-color: blue !important;
+  } */
+
+  .course-section h2 {
+    position: absolute;
+    right: 50px;
+  }
+}
+
 @media screen and (max-width: 880px),  screen and (max-height: 500px), screen and (orientation: portrait){
   body::before {
     content: "Please visit us on a screen";
