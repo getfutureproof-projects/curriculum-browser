@@ -5,6 +5,43 @@
   text-align: center;
 }
 
+main {
+  width: 65vw;
+  position: absolute;
+  right: 0;
+  top: 12vh;
+}
+
+#top-bar, #top-bar header {
+  margin: 0 !important;
+  height: 5vh;
+}
+
+#top-bar {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+#top-bar::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 25%;
+  background-color: var(--purple);
+  min-width: 200px;
+  min-height: 25px;
+  mask-image: var(--logo);
+  -webkit-mask-image: var(--logo);
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  z-index: 6;
+}
+
+#top-bar header {
+  background-color: transparent !important;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -15,6 +52,37 @@
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@media only screen and ((max-width: 880px) or (max-height: 500px) or (orientation: portrait)){
+  body::before {
+    content: "Please visit us on a screen";
+    background-color: var(--violet);
+    height: 50vh;
+    width: 100vw;
+    z-index: 5;
+    top: 0; left: 0;
+    position: fixed;
+      display: flex;
+      justify-items: center;
+      align-items: flex-end;
+      padding-left: 20px;
+      /* text-align: center; */
+    }
+    body::after {
+    padding-left: 20px;
+    content: "with a larger resolution, thank you!";
+    background-color:  var(--violet);
+    height: 50vh;
+    width: 100vw;
+    z-index: 5;
+    bottom: 0; left: 0;
+    position: fixed;
+      display: flex;
+      /* justify-items: center; */
+      align-items: flex-start;
+      text-align: center;
+  }
 }
 
 @keyframes logo-spin {

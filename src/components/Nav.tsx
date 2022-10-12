@@ -12,7 +12,7 @@ export function Nav({ sections }: NavProps): JSX.Element {
         return (
             <a className="btn"
                 style={{width: '20%'}}
-                href={`#${s.name}`}>
+                href={`#${s.name.toLowerCase()}`}>
                 {s.name}
             </a>
         )
