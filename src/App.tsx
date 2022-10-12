@@ -51,7 +51,7 @@ function App() {
         {/* <Nav sections={courseSections} /> */}
         {renderCourseSections()}
       </main>
-        <section className='footer' />
+        <section className='footer' style={{width: '100vw', position: 'fixed', bottom: 0, left: 0}}/>
         <Riser visible={!atTop}/>
     </>
   )

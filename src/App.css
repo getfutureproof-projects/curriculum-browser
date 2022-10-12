@@ -35,6 +35,7 @@ main {
   -webkit-mask-repeat: no-repeat;
   mask-size: contain;
   -webkit-mask-size: contain;
+  z-index: 6;
 }
 
 #top-bar header {
@@ -51,6 +52,37 @@ main {
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@media only screen and ((max-width: 880px) or (max-height: 500px)){
+  body::before {
+    content: "Please visit us on a screen";
+    background-color: var(--violet);
+    height: 50vh;
+    width: 100vw;
+    z-index: 5;
+    top: 0; left: 0;
+    position: fixed;
+      display: flex;
+      justify-items: center;
+      align-items: flex-end;
+      padding-left: 20px;
+      /* text-align: center; */
+    }
+    body::after {
+    padding-left: 20px;
+    content: "with a larger resolution, thank you!";
+    background-color:  var(--violet);
+    height: 50vh;
+    width: 100vw;
+    z-index: 5;
+    bottom: 0; left: 0;
+    position: fixed;
+      display: flex;
+      /* justify-items: center; */
+      align-items: flex-start;
+      text-align: center;
+  }
 }
 
 @keyframes logo-spin {
