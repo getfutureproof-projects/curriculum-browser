@@ -6,6 +6,7 @@ import { Sidebar } from './components/Sidebar'
 import { Info } from './components/Info'
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { useInView } from 'react-intersection-observer';
+import { AnimatedArrow } from './components/AnimatedArrow';
 
 
 function App() {
@@ -17,19 +18,13 @@ function App() {
   ]
 
   const { ref: headerRef, inView: atTop } = useInView();
-  // const [ showRiser, setShowRiser ] = useState(false)
-  // const { ref: magicSectionRef, inView: magicSectionIsVisible } = useInView();
-
-      // useEffect(() => {
-      //     setShowRiser(!atTop)
-      //   }, [atTop]);
-      
-  
 
   const [inViewStatus, setInViewStatus] = useState({})
+  // const [nextAnchor, setNextAnchor] = useState([])
 
   const updateSideBar = (section: string, isInView: boolean) => {
-      setInViewStatus(prev => ({...prev, [section]: isInView}))
+    setInViewStatus(prev => ({ ...prev, [section]: isInView }))
+    // setNext()
   }
 
 
@@ -38,21 +33,21 @@ function App() {
 
   return (
     <>
-    <section id="top-bar" className='bg-white' style={{position: 'fixed', top: 0, right: 0, width: '100%', zIndex: 1}}>
-
-      {/* <header className="bg-white" style={{position: 'fixed', top: 0, right: 0}}>
+      <section id="top-bar" className='bg-white' style={{ position: 'fixed', top: 0, right: 0, width: '100%', zIndex: 1 }}>
+        {/* <header className="bg-white" style={{position: 'fixed', top: 0, right: 0}}>
       </header> */}
-    </section>
-      <Sidebar inViewStatus={inViewStatus}/>
+      </section>
+      <Sidebar inViewStatus={inViewStatus} />
 
       <main>
-        <span ref={headerRef}/>
-      <Info/>
+        <span ref={headerRef} />
+        <Info />
         {/* <Nav sections={courseSections} /> */}
         {renderCourseSections()}
       </main>
-        <section className='footer' style={{width: '65vw', position: 'fixed', bottom: 0, right: 0}}/>
-        <Riser visible={!atTop}/>
+      <section className='footer' style={{ width: '65vw', position: 'fixed', bottom: 0, right: 0 }} />
+      <Riser downer={atTop} />
+      {/* <AnimatedArrow /> */}
     </>
   )
 }
@@ -60,32 +55,40 @@ function App() {
 export default App
 
 
-function Riser({visible}: {visible: boolean}){
+function Riser({ downer }: { downer: boolean }) {
   return (
     <div id="riser" style={{
       position: 'fixed',
       bottom: 0, left: 0,
       height: '13vh',
-      width: '33vw',
-      opacity: visible ? 1 : 0,
-      transition: 'opacity 1s'
+      width: '33vw'
     }}>
-      <AnchorLink offset={window.innerHeight * 0.12} href="#intro">
-      <div className='shape cog lime' style={{
-        position: 'absolute', right: 0, top: 0,
-        height: '9vh', width: '9vh'
-      }}>
+      <AnchorLink 
+        offset={window.innerHeight * 0.12} href={`#${downer ? 'foundations' : 'intro' }`} >
+        <div className='shape cog lime' style={{
+          position: 'absolute', right: 0, top: 0,
+          height: '9vh', width: '9vh'
+        }}>
 
-      </div>
+        </div>
 
-      <span className="text-display" style={{
-        position: 'absolute', right: 0, top: 0,
-        lineHeight: 1.7, color: 'var(--purple',
-    display: 'inline-block',
-        height: '9vh', width: '9vh', fontSize: '2em', verticalAlign: 'middle'
-      }}>
-        
-        ↑</span>
+        {/* <AnimatedArrow /> */}
+
+        <span 
+          className="text-display" 
+          style={{
+            position: 'absolute', right: 0, top: 0,
+            lineHeight: 1.7, color: 'var(--purple',
+            display: 'inline-block',
+            height: '9vh', width: '9vh', fontSize: '2em', verticalAlign: 'middle',
+            // style={{
+              transform: downer ? 'rotate(180deg)' : 'rotate(0deg)',
+              transformOrigin: 'center',
+              transition: 'transform 1s'
+            // }}>
+          }}> 
+
+          ↑</span>
       </AnchorLink>
     </div>
   )
