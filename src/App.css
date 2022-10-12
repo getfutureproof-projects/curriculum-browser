@@ -54,7 +54,7 @@ main {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-@media only screen and ((max-width: 880px) or (max-height: 500px)){
+@media only screen and ((max-width: 880px) or (max-height: 500px) or (orientation: portrait)){
   body::before {
     content: "Please visit us on a screen";
     background-color: var(--violet);
