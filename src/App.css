@@ -20,6 +20,23 @@ main {
 #top-bar {
   background-color: rgba(255, 255, 255, 0.7) !important;
 }
+
+#top-bar::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 25%;
+  background-color: var(--purple);
+  min-width: 200px;
+  min-height: 25px;
+  mask-image: var(--logo);
+  -webkit-mask-image: var(--logo);
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+}
+
 #top-bar header {
   background-color: transparent !important;
 }

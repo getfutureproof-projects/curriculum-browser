@@ -40,10 +40,8 @@ function App() {
     <>
     <section id="top-bar" className='bg-white' style={{position: 'fixed', top: 0, right: 0, width: '100%', zIndex: 1}}>
 
-      <header className="bg-white" style={{position: 'fixed', top: 0, right: 0}}>
-        {/* <Nav sections={courseSections}/> */}
-      
-      </header>
+      {/* <header className="bg-white" style={{position: 'fixed', top: 0, right: 0}}>
+      </header> */}
     </section>
       <Sidebar inViewStatus={inViewStatus}/>
 
