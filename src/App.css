@@ -54,7 +54,7 @@ main {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-@media only screen and ((max-width: 880px) or (max-height: 500px) or (orientation: portrait)){
+@media screen and (max-width: 880px),  screen and (max-height: 500px), screen and (orientation: portrait){
   body::before {
     content: "Please visit us on a screen";
     background-color: var(--violet);
@@ -82,6 +82,13 @@ main {
       /* justify-items: center; */
       align-items: flex-start;
       text-align: center;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+    --purple: #ffffff;
+    --white: #3c2157;
   }
 }
 
