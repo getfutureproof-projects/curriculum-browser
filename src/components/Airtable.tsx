@@ -5,14 +5,15 @@ import SquareLoader from "react-spinners/SquareLoader";
 interface AirtableProps extends HTMLAttributes<HTMLIFrameElement> {
     /** required */
     atId: string;
+    cards?: boolean;
 }
 
-export function Airtable({ atId }: AirtableProps) {
+export function Airtable({ atId, cards }: AirtableProps) {
     return (
             <LoadingIframe
                 skeleton={<Skeleton />}
                 className="airtable-embed" frameBorder={0} 
-                src={`https://airtable.com/embed/${atId}` }
+                src={`https://airtable.com/embed/${atId}?backgroundColor=purple${cards ? '&layout=card' : ''}` }
                 style={{
                     background: "transparent", 
                     border: "1px solid #ccc",
@@ -27,7 +28,7 @@ export function Airtable({ atId }: AirtableProps) {
 
 const Skeleton = () => {
       return (
-        <section className="ttb" style={{paddingTop: '100px'}}>
+        <section className="ttb" style={{paddingTop: '100px', width: '100%'}}>
 
         <SquareLoader
             color={'#3c2157'}

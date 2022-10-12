@@ -9,7 +9,7 @@
                 { 
                     "name": "Apply",
                     "description": "Apply & pass competency & technical interviews"
-                }
+                },
                 { 
                     "name": "Prepare",
                     "description": "Complete prep work"
@@ -22,10 +22,10 @@
             "color": "lime",
             "time": "12 weeks",
             "sections": [
-                { "name": "Foundations", "description": "Kickstart learning with fundamental tech skills" },
-                { "name": "Discovery", "description": "Explore skills across different tech roles" },
-                { "name": "Disciplines", "description": "Develop deeper expertise in specific areas" },
-                { "name": "Launch", "description": "Showcase new skills & projects" }
+                { "name": "Foundations", "description": "Kickstart learning with fundamental tech skills", "time": "2 weeks" },
+                { "name": "Discovery", "description": "Explore skills across different tech roles", "time": "4 weeks" },
+                { "name": "Disciplines", "description": "Develop deeper expertise in specific areas", "time": "3 weeks" },
+                { "name": "Launch", "description": "Showcase new skills & projects", "time": "3 weeks" }
             ]
         },
         {

@@ -1,17 +1,21 @@
 import './info.styles.css'
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 export function Info() {
     return (
-        <article className='info'>
-            <div className="tr">
-                The Core Modules are the heart & soul of this new programme. The topic areas have been defined as a result of extensive research & consultation with industry leaders, existing clients & our very own associates to identify the primary blockers for new hires into the technology industry across a wide variety of roles
+        <section id="intro" className="ttb" style={{minHeight: '80vh', flexWrap: 'nowrap', paddingTop: '20px', marginTop: 0 }}>
+            <h2>futureproof Intensive Curriculum</h2>
+            <div className="tr tip">
+                The futureproof programme creates & delivers training content that enables established technology teams to bring in diverse, junior talent with <em className="xbold">strong foundations</em>, an <em className="xbold">aligned mindset</em> and <em className="xbold">understanding of the technology industry as a whole</em>. With continuous improvement via consultation with industry leaders, existing partners & associates, we ensure that our associates are prepared for Day 1 of their placement with the <em className="xbold">key professional skills</em> required and a <em className="xbold">defined development plan</em> for their first 2 years in industry.
             </div>
-            <div className="br">
-                During the Core Modules taken, trainees work with their trainers to identify areas of particular strength. Trainers use these insights, along with a view of upcoming roles, to create discipline ‘pods’. Each pod work separately on selected modules to enhance their insight into key aspects of that discipline area before coming back together to share & apply their skills in a multi-disciplinary project.
+            <div className="br tip">
+                During the <AnchorLink offset={window.innerHeight * 0.12} href="#foundations"><em className="xbold">Foundations</em></AnchorLink> and <AnchorLink offset={window.innerHeight * 0.12} href="#discovery"><em className="xbold">Discovery</em></AnchorLink> phases of the <em className="xbold">12-week intensive training</em>, trainees work with their trainers to identify areas of particular strength. Trainers use these insights to create discipline ‘pods’. Each pod works separately on selected modules to enhance their insight into 
+                key aspects of a <AnchorLink offset={window.innerHeight * 0.12} href='#disciplines'><em className="xbold">Discipline</em></AnchorLink> area before coming back together in the <AnchorLink offset={window.innerHeight * 0.12} href="#launch"><em className="xbold">Launch</em></AnchorLink> phase to share & apply their skills in a multi-disciplinary project.
             </div>
-            <div id="left">
-                The futureproof programme creates & delivers training content that enables established technology teams to bring in diverse, junior talent with strong foundations, an aligned mindset and understanding of the technology industry as a whole. With continuous improvement via consultation with industry leaders, existing partners & associates, we ensure that our associates are prepared for Day 1 of their placement with the key professional skills required and a defined development plan for their first 2 years in industry.
+
+            <div className='tip'>
+                Throughout the <em className="xbold">2-year placement</em>, trainees have access to our full catalogue of <em className="xbold">additional content</em> across a range of topics including <em className="xbold">more languages & tools</em> as well as <em className="xbold">advanced concepts</em> not covered on the 12-week intensive training.
             </div>
-        </article>
+        </section>
     )
 }

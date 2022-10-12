@@ -5,6 +5,25 @@
   text-align: center;
 }
 
+main {
+  width: 65vw;
+  position: absolute;
+  right: 0;
+  top: 12vh;
+}
+
+#top-bar, #top-bar header {
+  margin: 0 !important;
+  height: 5vh;
+}
+
+#top-bar {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+}
+#top-bar header {
+  background-color: transparent !important;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
