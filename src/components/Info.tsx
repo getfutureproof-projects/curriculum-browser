@@ -5,7 +5,7 @@ export function Info() {
     return (
         <section id="intro" className="ttb" style={{minHeight: '80vh', flexWrap: 'nowrap', paddingTop: '20px', marginTop: 0 }}>
             <p className='medium p-tiny m-tiny'>futureproof Curriculum</p>
-            <h1 className='xlarge m-small' style={{marginBottom: '20px'}}>Intensive Traning Phase</h1>
+            <h1 className='xlarge m-small' style={{marginBottom: '20px'}}>Intensive Training Phase</h1>
             <div className="tr tip">
                 The futureproof programme creates & delivers training content that enables established technology teams to bring in diverse, junior talent with <em className="xbold">strong foundations</em>, an <em className="xbold">aligned mindset</em> and <em className="xbold">understanding of the technology industry as a whole</em>. With continuous improvement via consultation with industry leaders, existing partners & associates, we ensure that our associates are prepared for Day 1 of their placement with the <em className="xbold">key professional skills</em> required and a <em className="xbold">defined development plan</em> for their first 2 years in industry.
             </div>
