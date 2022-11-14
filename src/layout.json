@@ -22,10 +22,10 @@
             "color": "lime",
             "time": "12 weeks",
             "sections": [
-                { "name": "Foundations", "description": "Kickstart learning with fundamental tech skills", "time": "2 weeks" },
-                { "name": "Discovery", "description": "Explore skills across different tech roles", "time": "4 weeks" },
-                { "name": "Disciplines", "description": "Develop deeper expertise in specific areas", "time": "3 weeks" },
-                { "name": "Launch", "description": "Showcase new skills & projects", "time": "3 weeks" }
+                { "name": "Discovery", "description": "Kickstart learning with fundamental tech skills", "time": "3 weeks" },
+                { "name": "Delivery", "description": "Build an end-to-end project that solves a problem", "time": "3 weeks" },
+                { "name": "Disciplines", "description": "Develop deeper expertise in a tech discipline", "time": "3 weeks" },
+                { "name": "Launch", "description": "Showcase, share & apply new skills", "time": "3 weeks" }
             ]
         },
         {
