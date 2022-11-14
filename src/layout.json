@@ -47,6 +47,6 @@
         { "navRef": "lap2", "name": "Delivery", "atId": "shrUolFJ0sCdpGEEA", "time": "3 weeks", "description": "Gain essential understanding of & ability to apply key techniques to an end-to-end project delivery." },
         { "navRef": "lap3", "name": "Disciplines", "time": "3 weeks", "description": "Gain deeper understanding & ability to apply further techniques that are particularly desirable within the area of assigned discipline", "further": "Trainers use insights from the Foundation & Discovery sections to identify each student's areas of particular strength and create discipline ‘pods’. Each pod work separately on selected modules to enhance their insight into key aspects of that discipline area before coming back together to share & apply their skills in a multi-disciplinary project." },
         { "navRef": "lap4", "name": "Launch", "atId": "shrdjfcG9cqQDX92N", "time": "3 weeks", "description": "Gain understanding of interdisciplinary communication & collaboration and combine skills into a long-form multidisciplinary project" },
-        { "navRef": "placement", "name": "Associate", "atId": "shrjk2tfNqVm99rXP", "description": "Continue technical and professional development throughout immersive placement.", "note": "NB: Below is a small sample of associate modules available." }
+        { "navRef": "placement", "name": "Associate", "atId": "shrpQ67XtUlnYmw7P", "description": "Continue technical and professional development throughout immersive placement.", "note": "NB: Below is a small sample of associate modules available." }
       ]
 }
