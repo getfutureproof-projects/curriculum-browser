@@ -55,7 +55,8 @@ function Riser({ downer }: { downer: boolean }) {
       position: 'fixed',
       bottom: 0, left: 0,
       height: '13vh',
-      width: '33vw'
+      width: '33vw',
+      display: 'none'
     }}>
       <AnchorLink 
         offset={window.innerHeight * 0.12} href={`#${downer ? 'lap1' : 'intro' }`} >
