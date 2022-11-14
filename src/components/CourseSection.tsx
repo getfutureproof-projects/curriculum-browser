@@ -36,10 +36,10 @@ export function CourseSection({section, updateSideBar}: CourseSectionProps): any
         
     
     const disciplines = [
-        { name: "Software Engineering & Design", atId: "shrOTiklnj1suw6uq" },
-        { name: "Data & DevOps", atId: "shrJznamiQCd5vqO6", note: "In development, subject to change" }
+        { name: "Software Engineering & Design", atId: "shrOTiklnj1suw6uq", width: "62%"},
+        { name: "Data & DevOps", atId: "shrJznamiQCd5vqO6", note: "In development, subject to change", width: "35%" }
       ]
-      const renderDisciplines = () => disciplines.map((d, i) => <Table key={i} title={d.name} atId={d.atId} tWidth={"45%"} note={d.note} cards/>)
+      const renderDisciplines = () => disciplines.map((d, i) => <Table key={i} title={d.name} atId={d.atId} tWidth={d.width} note={d.note} />)
     
   return (
         <section className="course-section border" style={{width: "100%", paddingBottom: '100px', height: '110vh', position: 'relative', display: 'block' }}>
