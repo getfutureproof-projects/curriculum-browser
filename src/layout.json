@@ -6,11 +6,13 @@
             "color": "lemon",
             "time": "3 months",
             "sections": [
-                { 
+                {
+                    "sRef": "Application",
                     "name": "Apply",
                     "description": "Apply & pass competency & technical interviews"
                 },
                 { 
+                    "sRef": "Application",
                     "name": "Prepare",
                     "description": "Complete prep work"
                 }
@@ -22,10 +24,10 @@
             "color": "lime",
             "time": "12 weeks",
             "sections": [
-                { "name": "Discovery", "description": "Kickstart learning with fundamental tech skills", "time": "3 weeks" },
-                { "name": "Delivery", "description": "Build an end-to-end project that solves a problem", "time": "3 weeks" },
-                { "name": "Disciplines", "description": "Develop deeper expertise in a tech discipline", "time": "3 weeks" },
-                { "name": "Launch", "description": "Showcase, share & apply new skills", "time": "3 weeks" }
+                { "sRef": "Discovery", "name": "Discovery", "description": "Kickstart learning with fundamental tech skills", "time": "3 weeks" },
+                { "sRef": "Delivery", "name": "Delivery", "description": "Build an end-to-end project that solves a problem", "time": "3 weeks" },
+                { "sRef": "Disciplines", "name": "Disciplines", "description": "Develop deeper expertise in a tech discipline", "time": "3 weeks" },
+                { "sRef": "Launch", "name": "Launch", "description": "Showcase, share & apply new skills", "time": "3 weeks" }
             ]
         },
         {
@@ -34,9 +36,9 @@
             "color": "coral",
             "time": "2 years",
             "sections": [
-                { "name": "Transition", "description": "Prepare for placement" },
-                { "name": "Specialisation Y1", "description": "Build expertise in different disciplines" },
-                { "name": "Specialisation Y2", "description": "Expand expertise with additional disciplines" }
+                { "sRef": "Associate Content", "name": "Transition", "description": "Prepare for placement" },
+                { "sRef": "Associate Content", "name": "Specialisation Y1", "description": "Build expertise in different disciplines" },
+                { "sRef": "Associate Content", "name": "Specialisation Y2", "description": "Expand expertise with additional disciplines" }
             ]
         }
     ]

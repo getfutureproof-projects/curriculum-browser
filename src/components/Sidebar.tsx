@@ -19,8 +19,8 @@ export function Sidebar({ inViewStatus }: SidebarProps): JSX.Element {
         let mids: JSX.Element[] = []
         let rights: JSX.Element[] = []
         
-        const calcPeriodBg = (p: { sections: {name: string}[]}) => inViewStatus.hasOwnProperty(p.sections[0].name) ? 'bright' : 'greyscale'
-        const calcSectionBg = (s: { name: string }) => inViewStatus[s.name] ? 'bright' : 'greyscale'
+        const calcPeriodBg = (p: { sections: {sRef: string}[]}) => inViewStatus.hasOwnProperty(p.sections[0].sRef) ? 'bright' : 'greyscale'
+        const calcSectionBg = (s: { sRef: string }) => inViewStatus[s.sRef] ? 'bright' : 'greyscale'
 
         const renderFlip = (p: { color: string}, s: { name: string, description: string, time?: string }) => (<FlipCard
                         front={<div className={`right front bg-${p.color} ${calcSectionBg(s)}`}>
