@@ -58,7 +58,7 @@ function Riser({ downer }: { downer: boolean }) {
       width: '33vw'
     }}>
       <AnchorLink 
-        offset={window.innerHeight * 0.12} href={`#${downer ? 'foundations' : 'intro' }`} >
+        offset={window.innerHeight * 0.12} href={`#${downer ? 'lap1' : 'intro' }`} >
         <div className='shape cog lime' style={{
           position: 'absolute', right: 0, top: 0,
           height: '9vh', width: '9vh'
@@ -72,7 +72,7 @@ function Riser({ downer }: { downer: boolean }) {
           className="text-display" 
           style={{
             position: 'absolute', right: 0, top: 0,
-            lineHeight: 1.7, color: 'var(--purple',
+            lineHeight: "9vh", color: 'var(--purple',
             display: 'inline-block',
             height: '9vh', width: '9vh', fontSize: '2em', verticalAlign: 'middle',
             // style={{
