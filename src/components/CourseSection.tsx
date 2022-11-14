@@ -79,7 +79,7 @@ interface TableProps extends HTMLAttributes<HTMLDivElement> {
 const Table = ({title, atId, tWidth, cards, note}: TableProps): JSX.Element => (
     <div className="table" style={{width: tWidth, textAlign: 'left'}}>
         {title && <h4 style={{margin: '20px auto 5px 5px', paddingBottom: 0}}>{title}</h4> }
-        <span className="text-italic" style={{marginRight: 'auto', marginLeft: '5px', fontSize: 'smaller'}}><i>{ note || "Scroll & click for further module details" }</i></span>
+        <span className="text-italic" style={{marginRight: 'auto', marginLeft: '5px', fontSize: 'smaller'}}><i>{ note || ""}</i></span>
         <div style={{width: '100%', height: '60vh' }}>
         <Airtable atId={atId} cards={cards} />
         </div>
