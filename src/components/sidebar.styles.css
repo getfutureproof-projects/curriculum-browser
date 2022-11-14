@@ -27,6 +27,11 @@
     /* filter: grayscale(0.7) brightness(1.2); */
 }
 
+.greyscale:hover {
+    filter: opacity(50%);
+    border: 2px solid red;
+}
+
 #sidebar div p {
     line-height: 1.5;
     display: inline-block;
@@ -45,6 +50,21 @@
 
 .sectitle.sidebar {
     margin-top: 5px;
+    font-weight: bold;
+}
+.secheader.sidebar {
+    font-size: x-large;
+    display: block;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+    line-height: ;
+    
+}
+
+.secdescrip.sidebar {
+    margin-top: -5px;
+    font-size: small;
 }
 
 .left {
@@ -57,6 +77,7 @@
 .tip.sidebar {
     margin: 0;
     width: 100%;
+    text-align: center;
 }
 
 .mid {
@@ -64,18 +85,27 @@
 
 .right {
     height: 100%;
-}
-
-.right.front {
     font-size: medium;
 }
 
+.right.back, .right.front {
+    /* border: 2px solid blue; */
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    /* align-content: center; */
+    justify-items: center;
+}
+
+/* .right.bright {
+    border: 1px dotted var(--purple); 
+} */
+
 .right.back {
-    padding: 10px;
-    font-size: small;
     line-height: normal;
-    border: 1px dashed var(--purple);
-    background-color: var(--white) !important;
+    /* border: 1px dotted var(--purple); */
+    /* background-color: var(--white) !important; */
+    /* filter: opacity(60%); */
     -webkit-box-shadow: inset 0px 0px 5px 5px rgba(255,255,255,0.6); 
     box-shadow: inset 0px 0px 5px 5px rgba(255,255,255,0.6);
 }

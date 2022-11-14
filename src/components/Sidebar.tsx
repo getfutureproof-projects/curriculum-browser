@@ -30,10 +30,14 @@ export function Sidebar({ inViewStatus }: SidebarProps): JSX.Element {
 
         const renderFlip = (p: { color: string}, s: { name: string, navRef: string, description: string, time?: string }) => (<FlipCard
                         front={<div className={`right front bg-${p.color} ${calcSectionBg(s)}`}>
-                            <span className="sectitle sidebar">{s.name}</span><br />
-                            {s.time && <span className="tip sidebar">{s.time}</span>}
+                            <span className="secheader sidebar">{s.name}</span>
                         </div>} 
-                        back={<div className={`right back bg-${p.color} light`}>{s.description}</div>}
+                        back={<div className={`right back bg-${p.color} ${calcSectionBg(s)}`}>
+                            <span className="sectitle sidebar">{s.name}</span>
+                            {s.time && <span className="tip sidebar text-italic">{s.time}</span>}<br />
+                            <span className="secdescrip sidebar">{s.description}</span><br />
+                        </div>} 
+                        // back={<div className={`right back bg-${p.color} light`}>{s.description}</div>}
                     />)
  
         periods.forEach((p, i) => {
