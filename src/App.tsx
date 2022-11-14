@@ -1,6 +1,7 @@
 import './App.css'
 import { useState, useEffect } from 'react';
 import { CourseSection } from './components/CourseSection'
+import { navSections } from './layout.json'
 import { Nav } from './components/Nav'
 import { Sidebar } from './components/Sidebar'
 import { Info } from './components/Info'
@@ -10,14 +11,6 @@ import { AnimatedArrow } from './components/AnimatedArrow';
 
 
 function App() {
-  const courseSections = [
-    { name: "Discovery", atId: "shrdM3hKaMLUnLRGm", time: "3 weeks", description: "Gain insight into the landscape of the modern tech industry and ability to apply key professional development & communication skills", further: "The Core Modules are the heart & soul of this new programme. The topic areas have been defined as a result of extensive research & consultation with industry leaders, existing clients & our very own associates to identify the primary blockers for new hires into the technology industry across a wide variety of roles." },
-    { name: "Delivery", atId: "shrUolFJ0sCdpGEEA", time: "3 weeks", description: "Gain essential understanding of & ability to apply basic techniques in key technology areas" },
-    { name: "Disciplines", time: "3 weeks", description: "Gain deeper understanding & ability to apply further techniques that are particularly desirable within the area of assigned discipline", further: "Trainers use insights from the Foundation & Discovery sections to identify each student's areas of particular strength and create discipline ‘pods’. Each pod work separately on selected modules to enhance their insight into key aspects of that discipline area before coming back together to share & apply their skills in a multi-disciplinary project." },
-    { name: "Launch", atId: "shrdjfcG9cqQDX92N", time: "3 weeks", description: "Gain understanding of interdisciplinary communication & collaboration and combine skills into a long-form multidisciplinary project" },
-    { name: "Associate Content", atId: "shrjk2tfNqVm99rXP", description: "Continue techincal and professional development throughout immersive placement" }
-  ]
-
   const { ref: headerRef, inView: atTop } = useInView();
 
   const [inViewStatus, setInViewStatus] = useState({})
@@ -29,7 +22,7 @@ function App() {
   }
 
 
-  const renderCourseSections = () => courseSections.map((s, i) => <CourseSection key={i} sectionName={s.name} atId={s.atId} description={s.description} further={s.further} updateSideBar={updateSideBar} />)
+  const renderCourseSections = () => navSections.map((s, i) => <CourseSection key={i} section={s} updateSideBar={updateSideBar} />)
 
 
   return (

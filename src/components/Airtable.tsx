@@ -5,7 +5,7 @@ import RingLoader from "react-spinners/RingLoader";
 
 interface AirtableProps extends HTMLAttributes<HTMLIFrameElement> {
     /** required */
-    atId: string;
+    atId?: string;
     cards?: boolean;
 }
 

@@ -19,10 +19,16 @@ export function Sidebar({ inViewStatus }: SidebarProps): JSX.Element {
         let mids: JSX.Element[] = []
         let rights: JSX.Element[] = []
         
-        const calcPeriodBg = (p: { sections: {sRef: string}[]}) => inViewStatus.hasOwnProperty(p.sections[0].sRef) ? 'bright' : 'greyscale'
-        const calcSectionBg = (s: { sRef: string }) => inViewStatus[s.sRef] ? 'bright' : 'greyscale'
 
-        const renderFlip = (p: { color: string}, s: { name: string, description: string, time?: string }) => (<FlipCard
+        // const calcPeriodBg = (p: { sections: {navRef: string}[]}) => inViewStatus.hasOwnProperty(p.sections[0].navRef) && !!inViewStatus[p.sections[0].navRef] ? 'bright' : 'greyscale'
+
+        const calcPeriodBg = (p: {sections: { navRef: string}[]}) => {
+            let activeRef = p.sections.find(s => inViewStatus.hasOwnProperty(s.navRef) && !!inViewStatus[s.navRef])
+            return activeRef ? 'bright' : 'greyscale'
+        }
+        const calcSectionBg = (s: { navRef: string }) => inViewStatus[s.navRef] ? 'bright' : 'greyscale'
+
+        const renderFlip = (p: { color: string}, s: { name: string, navRef: string, description: string, time?: string }) => (<FlipCard
                         front={<div className={`right front bg-${p.color} ${calcSectionBg(s)}`}>
                             <span className="sectitle sidebar">{s.name}</span><br />
                             {s.time && <span className="tip sidebar">{s.time}</span>}
@@ -31,12 +37,13 @@ export function Sidebar({ inViewStatus }: SidebarProps): JSX.Element {
                     />)
  
         periods.forEach((p, i) => {
-            
+
             let sections = p.sections.map((s, si) => (
-                <div key={si + i} className={`right`}>
+                
+                <div key={s.name} className={`right`}>
                     { 
-                        inViewStatus.hasOwnProperty(s.name) ? 
-                            (<AnchorLink offset={window.innerHeight * 0.12} href={`#${s.name.toLowerCase()}`} style={{ color: "var(--purple)"}}>
+                        inViewStatus.hasOwnProperty(s.navRef) ? 
+                            (<AnchorLink offset={window.innerHeight * 0.12} href={`#${s.navRef}`} style={{ color: "var(--purple)"}}>
                                 {renderFlip(p, s)}
                             </AnchorLink>)
                             :

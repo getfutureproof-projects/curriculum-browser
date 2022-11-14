@@ -7,12 +7,12 @@
             "time": "3 months",
             "sections": [
                 {
-                    "sRef": "Application",
+                    "navRef": "application",
                     "name": "Apply",
                     "description": "Apply & pass competency & technical interviews"
                 },
                 { 
-                    "sRef": "Application",
+                    "navRef": "application",
                     "name": "Prepare",
                     "description": "Complete prep work"
                 }
@@ -24,10 +24,10 @@
             "color": "lime",
             "time": "12 weeks",
             "sections": [
-                { "sRef": "Discovery", "name": "Discovery", "description": "Kickstart learning with fundamental tech skills", "time": "3 weeks" },
-                { "sRef": "Delivery", "name": "Delivery", "description": "Build an end-to-end project that solves a problem", "time": "3 weeks" },
-                { "sRef": "Disciplines", "name": "Disciplines", "description": "Develop deeper expertise in a tech discipline", "time": "3 weeks" },
-                { "sRef": "Launch", "name": "Launch", "description": "Showcase, share & apply new skills", "time": "3 weeks" }
+                { "navRef": "lap1", "name": "Discovery", "description": "Kickstart learning with fundamental tech skills", "time": "3 weeks" },
+                { "navRef": "lap2", "name": "Delivery", "description": "Build an end-to-end project that solves a problem", "time": "3 weeks" },
+                { "navRef": "lap3", "name": "Disciplines", "description": "Develop deeper expertise in a tech discipline", "time": "3 weeks" },
+                { "navRef": "lap4", "name": "Launch", "description": "Showcase, share & apply new skills", "time": "3 weeks" }
             ]
         },
         {
@@ -36,10 +36,17 @@
             "color": "coral",
             "time": "2 years",
             "sections": [
-                { "sRef": "Associate Content", "name": "Transition", "description": "Prepare for placement" },
-                { "sRef": "Associate Content", "name": "Specialisation Y1", "description": "Build expertise in different disciplines" },
-                { "sRef": "Associate Content", "name": "Specialisation Y2", "description": "Expand expertise with additional disciplines" }
+                { "navRef": "placement", "name": "Transition", "description": "Prepare for placement" },
+                { "navRef": "placement", "name": "Specialisation Y1", "description": "Build expertise in different disciplines" },
+                { "navRef": "placement", "name": "Specialisation Y2", "description": "Expand expertise with additional disciplines" }
             ]
         }
-    ]
+    ],
+    "navSections": [
+        { "navRef": "lap1", "name": "Discovery", "atId": "shrdM3hKaMLUnLRGm", "time": "3 weeks", "description": "Gain insight into the landscape of the modern tech industry and ability to apply key professional development & communication skills", "further": "The Core Modules are the heart & soul of this new programme. The topic areas have been defined as a result of extensive research & consultation with industry leaders, existing clients & our very own associates to identify the primary blockers for new hires into the technology industry across a wide variety of roles." },
+        { "navRef": "lap2", "name": "Delivery", "atId": "shrUolFJ0sCdpGEEA", "time": "3 weeks", "description": "Gain essential understanding of & ability to apply basic techniques in key technology areas" },
+        { "navRef": "lap3", "name": "Disciplines", "time": "3 weeks", "description": "Gain deeper understanding & ability to apply further techniques that are particularly desirable within the area of assigned discipline", "further": "Trainers use insights from the Foundation & Discovery sections to identify each student's areas of particular strength and create discipline ‘pods’. Each pod work separately on selected modules to enhance their insight into key aspects of that discipline area before coming back together to share & apply their skills in a multi-disciplinary project." },
+        { "navRef": "lap4", "name": "Launch", "atId": "shrdjfcG9cqQDX92N", "time": "3 weeks", "description": "Gain understanding of interdisciplinary communication & collaboration and combine skills into a long-form multidisciplinary project" },
+        { "navRef": "placement", "name": "Associate", "atId": "shrjk2tfNqVm99rXP", "description": "Continue technical and professional development throughout immersive placement.", "note": "NB: Below is a small sample of associate modules available." }
+      ]
 }
